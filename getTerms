@@ -1,0 +1,5 @@
+#!/bin/bash
+read contentHash
+filePath="data/${contentHash:14:2}/${contentHash:16:2}/${contentHash:14}"
+preston get $contentHash --remote https://deeplinker.bio/ > /dev/null
+python3 getTerms.py "${filePath}" "${contentHash}"

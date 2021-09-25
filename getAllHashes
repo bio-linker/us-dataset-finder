@@ -1,0 +1,2 @@
+#!/bin/bash
+preston get hash://sha256/1fd3e156c6ba1632a27b2bebaea36f76afeac8dfecf530d772988832821304ea --remote https://preston.acis.ufl.edu/ | grep hasVersion | sed -r 's_<[^>]*> <http://purl.org/pav/hasVersion> <(hash://sha256/.{64})>.*_\1_' | grep -v '^<'
