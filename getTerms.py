@@ -26,7 +26,10 @@ keyFieldNames = {
 	'http://rs.tdwg.org/dwc/terms/county',
 	'http://rs.tdwg.org/dwc/terms/municipality',
 	'http://rs.tdwg.org/dwc/terms/locality',
-	'http://rs.tdwg.org/dwc/terms/verbatimLocality'
+	'http://rs.tdwg.org/dwc/terms/verbatimLocality',
+	'http://rs.twdg.org/dwc/terms/basisOfRecord',
+	'http://rs.twdg.org/dwc/terms/datasetName',
+	'http://rs.twdg.org/dwc/terms/ownerInstitutionCode'
 }
 
 try:
@@ -59,3 +62,20 @@ except AttributeError:
 	pass
 except Exception as e:
 	raise e
+#options within occurrences.txt:
+	#institution Code
+	#collection code
+	#institution id
+	#rights holder
+
+#maybe in eml:
+	#also noticed in eml organizationName
+
+
+#general approach: 
+	#look at alternate identifier in eml and determine if is based in us
+
+
+#maybe preserved specimen instead of occurrence for rowtype (or maybe also can be looked at) (never mind maybe)
+
+#required field is basis of record: preserved specimen or fossil specimen (idk for taking other ones, so not to worry about these)
