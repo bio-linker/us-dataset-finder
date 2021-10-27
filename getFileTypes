@@ -1,4 +1,4 @@
 #!/bin/bash
 read contentHash
 filePath="/mnt/preston.acis.ufl.edu_data/gbif-idigbio-biocase/data/${contentHash:14:2}/${contentHash:16:2}/${contentHash:14}"
-zipinfo -1 $filePath 2>/dev/null | awk -v contentHash="$contentHash" '{print $0 "\t" contentHash}'
+file --brief --mime $filePath | awk -v contentHash="$contentHash" '{print contentHash "\t" $0}'
